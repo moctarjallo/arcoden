@@ -23,8 +23,11 @@ const useStyles = makeStyles(theme => ({
 function SignInUp() {
   const classes = useStyles();
   const [student, setStudent] = React.useState({
-    firstname: "Prenom",
-    lastname: "Nom"
+    firstname: "",
+    lastname: "",
+    address: "",
+    school: "",
+    level: ""
   });
   return (
     <form className={classes.container} noValidate autoComplete="off">
@@ -32,6 +35,34 @@ function SignInUp() {
         id="firstname"
         label="Prenom"
         placeholder={student.firstname}
+        className={classes.textField}
+        margin="normal"
+      />
+      <TextField
+        id="lastname"
+        label="Nom"
+        placeholder={student.lastname}
+        className={classes.textField}
+        margin="normal"
+      />
+      <TextField
+        id="school"
+        label="Ecole"
+        placeholder={student.school}
+        className={classes.textField}
+        margin="normal"
+      />
+      <TextField
+        id="level"
+        label="Niveau"
+        placeholder={student.level}
+        className={classes.textField}
+        margin="normal"
+      />
+      <TextField
+        id="address"
+        label="Quartier D'Origine"
+        placeholder={student.address}
         className={classes.textField}
         margin="normal"
       />
