@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField } from "@material-ui/core";
+import { TextField, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -27,45 +27,57 @@ function SignInUp() {
     lastname: "",
     address: "",
     school: "",
-    level: ""
+    level: "",
+    tel: ""
   });
   return (
     <form className={classes.container} noValidate autoComplete="off">
-      <TextField
-        id="firstname"
-        label="Prenom"
-        placeholder={student.firstname}
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="lastname"
-        label="Nom"
-        placeholder={student.lastname}
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="school"
-        label="Ecole"
-        placeholder={student.school}
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="level"
-        label="Niveau"
-        placeholder={student.level}
-        className={classes.textField}
-        margin="normal"
-      />
-      <TextField
-        id="address"
-        label="Quartier D'Origine"
-        placeholder={student.address}
-        className={classes.textField}
-        margin="normal"
-      />
+      <Grid container direction="column" alignItems="center">
+        <Grid item direction="row">
+          <TextField
+            id="firstname"
+            label="Prenom"
+            placeholder={student.firstname}
+            className={classes.textField}
+            margin="normal"
+          />
+          <TextField
+            id="lastname"
+            label="Nom"
+            placeholder={student.lastname}
+            className={classes.textField}
+            margin="normal"
+          />
+        </Grid>
+        <TextField
+          id="school"
+          label="Ecole"
+          placeholder={student.school}
+          className={classes.textField}
+          margin="normal"
+        />
+        <TextField
+          id="level"
+          label="Niveau"
+          placeholder={student.level}
+          className={classes.textField}
+          margin="normal"
+        />
+        <TextField
+          id="address"
+          label="Quartier"
+          placeholder={student.address}
+          className={classes.textField}
+          margin="normal"
+        />
+        <TextField
+          id="phone"
+          label="Telephone"
+          placeholder={student.tel}
+          className={classes.textField}
+          margin="normal"
+        />
+      </Grid>
     </form>
   );
 }
