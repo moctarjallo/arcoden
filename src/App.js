@@ -1,11 +1,11 @@
 import React from "react";
 
-import Test from "./Test";
+import SignInUp from "./components/SignInUp";
 
 function App() {
   return (
     <div className="App">
-      <Test />
+      <SignInUp />
     </div>
   );
 }
